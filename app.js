@@ -24,13 +24,13 @@ const itemSchema={
 const Item=mongoose.model("Item",itemSchema);
 
 const item1= new Item({
-    name:"Welcome to your todoList!"
+    name:"Welcome to your todoList Web!"
 });
 const item2= new Item({
     name:"Hit the + button to add a new items."
 });
 const item3= new Item({
-    name:"<-- Hit this to delete an itme."
+    name:"<-- Hit this to delete an itmes."
 });
 const defaultItems=[item1,item2,item3];
 
