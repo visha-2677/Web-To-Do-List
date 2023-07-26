@@ -27,7 +27,7 @@ const item1= new Item({
     name:"Welcome to your todoList!"
 });
 const item2= new Item({
-    name:"Hit the + button to add a new item."
+    name:"Hit the + button to add a new items."
 });
 const item3= new Item({
     name:"<-- Hit this to delete an itme."
