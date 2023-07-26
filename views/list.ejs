@@ -1,0 +1,45 @@
+<!-- add Header use ejs code-->
+<%- include("header")   -%>
+
+<body>
+    <!-- Why use ejs file ? because of no of html file can reduce to add logic in html file to use in js file -->
+
+
+    <!-- V1 -->
+    <!-- <h1>It's a <%= ListTitle %></h1> -->
+    <!-- changes of html tage line to condition to us Ejs -->
+    <!-- thid website https://ejs.co/ why use <% %> because ejs file in logic can not dairect excess in ejs file and <% %>this symbol can use only opening and closing prenthisis -->
+    <!-- <% if(ListTitle === "Monday"){ %>
+        <h1 style="color: aquamarine;">It's a <%= ListTitle %></h1>
+    <% }else{ %>
+        <h1 style="color:gold;">It's a <%= ListTitle %></h1>
+    <% } %> -->
+
+
+
+    <!-- V2 -->
+    <div class="box" id="heading">
+        <h1><%= ListTitle %></h1>
+    </div>
+
+    <div class="box">
+            <!-- <li><%= ListTitle %></li> -->
+            <%newListItem.forEach(function(item){%>
+                <form action="/delete" method="POST">
+                    <div class="item">
+                        <input type="checkbox" name="checkbox" value="<%=item.id %>" onChange="this.form.submit()">
+                        <p><%= item.name %></p>
+                    </div>
+                    <input type="hidden" name="listName" value="<%= ListTitle %>"</input>
+                </form>
+            <%})%>
+                <form class="item" action="/" method="POST">
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="list" value=<%= ListTitle %>  >+</button>
+                </form>
+    </div>
+    
+
+
+<!-- add footer use ejs code-->
+<%- include("footer")   -%>
