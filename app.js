@@ -27,10 +27,10 @@ const item1= new Item({
     name:"Welcome to your todoList Web!"
 });
 const item2= new Item({
-    name:"Hit the + button to add a new items."
+    name:"Hit the + button to add a new My items."
 });
 const item3= new Item({
-    name:"<-- Hit this to delete an itmes."
+    name:"<-- Hit this to delete an My itmes."
 });
 const defaultItems=[item1,item2,item3];
 
