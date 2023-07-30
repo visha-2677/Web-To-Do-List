@@ -6,8 +6,32 @@ html {
 }
 
 h1 {
+  position: relative;
   color: #fff;
   padding: 10px;
+  left: 35%;
+}
+.listitle{
+  display: flex;
+  flex-direction: row;
+}
+
+.item1{
+  position: relative;
+  left: 57%;
+  /* background-color: white; */
+  top: 28px;
+}
+.Mybtn{
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fff;
+  color: #A683E3;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
 }
 
 .box {
@@ -20,7 +44,6 @@ h1 {
 
 #heading {
   background-color: #A683E3;
-  text-align: center;
 }
 
 .item {
@@ -34,7 +57,7 @@ h1 {
   border-bottom: 0;
 }
 
-input:checked+p {
+input:checked+p { 
   text-decoration: line-through;
   text-decoration-color: #A683E3;
 }
@@ -93,4 +116,32 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+.listname{
+  max-width: 380px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+a.AnchorLink {
+  height: 35px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fff;
+  color: #A683E3;
+  font-size: 30px;
+  font-weight:900;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  border-width: 0;
+  text-align: center; /* For centering text within the anchor tag */
+  text-decoration: none; /* Remove default underline styling for anchor tag */
+  display: inline-block;/* To make sure anchor tag behaves like a button */
+  position: relative;
+  left: 57%;
+  top: 30px;
 }

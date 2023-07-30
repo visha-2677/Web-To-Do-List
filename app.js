@@ -27,10 +27,10 @@ const item1= new Item({
     name:"Welcome to your todoList Web!"
 });
 const item2= new Item({
-    name:"Hit the + button to add a new My items."
+    name:"Hit the + button to add a new item."
 });
 const item3= new Item({
-    name:"<-- Hit this to delete an My itmes."
+    name:"<-- Hit this to delete an itme."
 });
 const defaultItems=[item1,item2,item3];
 
@@ -126,14 +126,13 @@ app.get("/",function(req,res){
     .catch(function(err){
         console.log(err);
     })
-    
-
-
 });
+app.get("/createlist",function(req,res){
+    res.render("createlist");
+})
 
 app.get("/:customListName",function(req,res){
     const customeListName=_.capitalize(req.params.customListName);
-    
 
     List.findOne({name:customeListName}).then(function(foundList){
         res.render("list",{ListTitle:foundList.name,newListItem:foundList.items})
@@ -226,6 +225,12 @@ app.post("/",function(req,res){
 //     workitems.push(item);
 //     res.redirect("/work");
 // })
+app.post("/newlist",function(req,res){
+    const ListTitleName=req.body.listitle;
+    res.redirect("/"+ListTitleName);
+})
+
+
 
 app.get("/about",function(req,res){
     res.render("about");
